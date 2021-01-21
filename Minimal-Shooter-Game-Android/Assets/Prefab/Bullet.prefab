@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   destroyTime: 3
+  joystickName: Fixed Joystick
 --- !u!114 &6687485765960078327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: Enemy
+  canDestroy: 1
 --- !u!61 &6361721491374229557
 BoxCollider2D:
   m_ObjectHideFlags: 0

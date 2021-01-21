@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class RotateRing : MonoBehaviour
 {
-    [SerializeField]float rotateSpeed;
+    [SerializeReference] Joystick joystick;
+    [SerializeField] float offset;
 
     void Update()
     {
-        transform.Rotate(0, 0,-rotateSpeed * Time.deltaTime);
+        Vector3 lookDirection = new Vector2(joystick.Horizontal,joystick.Vertical);
+        float direction = Mathf.Atan2(joystick.Vertical, joystick.Horizontal)* Mathf.Rad2Deg; 
+        
+        lookDirection.Normalize();
+        transform.rotation = Quaternion.Euler(0, 0, direction+offset);
     }
 }

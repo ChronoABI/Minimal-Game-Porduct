@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionSystem : MonoBehaviour
 {
     [SerializeReference] string Target;
+    [SerializeField] bool canDestroy;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,7 +13,11 @@ public class CollisionSystem : MonoBehaviour
         {
             Debug.Log("Collided");
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            if (canDestroy)
+            {
+                Destroy(gameObject);
+            }
+           
         }   
     }
 }

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: Player
+  canDestroy: 1
 --- !u!114 &2077595770
 MonoBehaviour:
   m_ObjectHideFlags: 0
